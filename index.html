@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock, Paper, Scissors</title>
+		<!-- Linking CSS file -->
+		<link rel="stylesheet" href="./css/main.css" />
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- Main wrapper -->
+		<div class="wrapper w-full">
+			<!-- Logo and loading screen -->
+			<img
+				class="w-2/3 h-2/3 absolute opacity-100 transition-all inset-0 m-auto z-50"
+				src="./img/cover_1.gif"
+				alt="cover_1" />
+			<div
+				class="loading w-full h-full absolute opacity-0 transition-all inset-0 m-auto bg-slate-500 z-50">
+				<!-- Loading animation -->
+				<img
+					class="w-full h-full blur-lg absolute inset-0 m-auto -z-10"
+					src="./img/cover_2.jpg"
+					alt="cover_2" />
+				<div
+					class="loader w-28 h-28 rounded-full border-4 border-solid border-slate-900 border-r-transparent animate-spin shadow-[0px_0px_20px_inset] shadow-slate-800 absolute inset-0 m-auto"></div>
+				<p class="w-fit h-fit text-white absolute text-sm inset-0 m-auto">
+					Loading...
+				</p>
+			</div>
+			<!-- Game intro content -->
+			<div
+				class="content_1 w-full h-full absolute opacity-0 transition-all z-40">
+				<!-- Title -->
+				<img
+					class="w-full h-full absolute inset-0 m-auto -z-10"
+					src="./img/cover_2.jpg"
+					alt="cover_2" />
+				<p
+					class="title w-fit h-fit absolute opacity-0 transition-all inset-x-0 inset-y-[68%] m-auto flex flex-col justify-center items-center">
+					<span
+						class="xl:text-4xl lg:text-xl font-medium tracking-widest text-rose-300"
+						>Rock</span
+					>
+					<span
+						class="xl:text-4xl lg:text-xl font-medium tracking-widest text-purple-300"
+						>Paper</span
+					>
+					<span
+						class="xl:text-4xl lg:text-xl font-medium tracking-widest text-cyan-300"
+						>Scissors</span
+					>
+				</p>
+				<!-- Start button -->
+				<button
+					class="xl:w-40 xl:h-18 lg:w-36 lg:h-14 md:w-28 md:h-10 bg-rose-600 p-6 rounded-full shadow-xl absolute inset-x-0 inset-y-[90%] m-auto flex flex-row justify-center items-center cursor-pointer hover:bg-rose-400 group transition-all animate-bounce"
+					type="button">
+					<span
+						class="text-center text-white group-hover:text-black xl:text-[16px] lg:text-sm md:text-[11px] font-bold"
+						>play now!</span
+					>
+				</button>
+			</div>
+			<!-- Gameplay content -->
+			<div
+				class="content_2 w-full h-ful absolute opacity-0 transition-all inset-0 m-auto overflow-hidden z-30">
+				<!-- Title -->
+				<img
+					class="w-full h-full blur-md absolute inset-0 m-auto -z-10"
+					src="./img/cover_3.jpg"
+					alt="cover_3" />
+				<h1
+					class="text-center xl:text-7xl lg:text-6xl md:text-5xl pt-5 text-black">
+					Rock Paper Scissors
+				</h1>
+				<!-- Scoreboard -->
+				<div
+					class="score text-center xl:text-3xl lg:text-2xl md:text-xl pt-14 flex flex-row justify-center items-center">
+					<div
+						class="you text-black flex flex-col justify-center items-center mr-14">
+						You
+						<span class="you_score text-rose-400 mt-6">0</span>
+					</div>
+					<div
+						class="draw text-black flex flex-col justify-center items-center mr-14">
+						Draw
+						<span class="draw_score text-rose-400 mt-6">0</span>
+					</div>
+					<div
+						class="computer text-black flex flex-col justify-center items-center">
+						Computer
+						<span class="com_score text-rose-400 mt-6">0</span>
+					</div>
+				</div>
+				<!-- Game result -->
+				<p
+					class="text-black text-center mt-10 xl:text-6xl lg:text-5xl md:text-4xl">
+					You Win
+				</p>
+				<!-- Player hands -->
+				<div class="hand flex flex-row justify-center items-center">
+					<div
+						class="player_1 xl:w-auto xl:h-auto md:w-52 md:h-52 mr-52 p-3 flex flex-row justify-center items-center">
+						<img src="./img/rock_left.png" alt="rock_left" />
+					</div>
+					<div
+						class="player_2 xl:w-auto xl:h-auto md:w-52 md:h-52 p-3 flex flex-row justify-center items-center">
+						<img src="./img/rock.png" alt="rock" />
+					</div>
+				</div>
+				<!-- Game buttons -->
+				<div class="button flex flex-row justify-evenly items-center">
+					<div
+						class="btn_1 xl:w-32 xl:h-32 lg:w-24 lg:h-24 md:w-20 md:h-20 bg-slate-800 rounded-full flex flex-row justify-center items-center hover:bg-gray-500 transition-all cursor-pointer">
+						<img src="./img/rock_button.png" alt="rock_button" />
+					</div>
+					<div
+						class="btn_2 xl:w-32 xl:h-32 lg:w-24 lg:h-24 md:w-20 md:h-20 bg-slate-800 rounded-full flex flex-row justify-center items-center hover:bg-gray-500 transition-all cursor-pointer">
+						<img src="./img/scissors_button.png" alt="scissors_button" />
+					</div>
+					<div
+						class="btn_3 xl:w-32 xl:h-32 lg:w-24 lg:h-24 md:w-20 md:h-20 bg-slate-800 rounded-full flex flex-row justify-center items-center hover:bg-gray-500 transition-all cursor-pointer">
+						<img src="./img/paper_button.png" alt="paper_button" />
+					</div>
+				</div>
+				<!-- Game instruction -->
+				<p
+					class="w-fit h-fit text-center xl:text-2xl lg:text-xl md:text-lg text-black absolute inset-x-0 inset-y-[95%] m-auto animate-bounce">
+					CHOOSE WISELY
+				</p>
+			</div>
+			<!-- Result screens -->
+			<!-- Win -->
+			<div class="win absolute inset-0 m-auto opacity-0 transition-all -z-10">
+				<img
+					class="w-full h-full blur-md absolute inset-0 m-auto -z-10"
+					src="./img/cover_3.jpg"
+					alt="cover_3" />
+				<p
+					class="w-fit h-fit text-black text-7xl absolute top-[30%] inset-x-0 m-auto">
+					You won the match!!!
+				</p>
+				<!-- Play again button -->
+				<button
+					class="xl:w-40 xl:h-18 lg:w-36 lg:h-14 md:w-28 md:h-10 bg-rose-600 p-6 rounded-full shadow-xl absolute top-20 inset-0 m-auto flex flex-row justify-center items-center cursor-pointer hover:bg-rose-400 group transition-all animate-bounce"
+					type="button">
+					<span
+						class="text-center text-white group-hover:text-black xl:text-[16px] lg:text-sm md:text-[11px] font-bold"
+						>Play Again</span
+					>
+				</button>
+			</div>
+			<!-- Draw -->
+			<div class="draw absolute inset-0 m-auto opacity-0 transition-all -z-10">
+				<img
+					class="w-full h-full blur-md absolute inset-0 m-auto -z-10"
+					src="./img/cover_3.jpg"
+					alt="cover_3" />
+				<p
+					class="w-fit h-fit text-black text-7xl absolute top-[30%] inset-x-0 m-auto">
+					It's a Stalemate
+				</p>
+				<!-- Try again button -->
+				<button
+					class="xl:w-40 xl:h-18 lg:w-36 lg:h-14 md:w-28 md:h-10 bg-rose-600 p-6 rounded-full shadow-xl absolute top-20 inset-0 m-auto flex flex-row justify-center items-center cursor-pointer hover:bg-rose-400 group transition-all animate-bounce"
+					type="button">
+					<span
+						class="text-center text-white group-hover:text-black xl:text-[16px] lg:text-sm md:text-[11px] font-bold"
+						>Try Again</span
+					>
+				</button>
+			</div>
+			<!-- Lose -->
+			<div class="lose absolute inset-0 m-auto opacity-0 transition-all -z-10">
+				<img
+					class="w-full h-full blur-md absolute inset-0 m-auto -z-10"
+					src="./img/cover_3.jpg"
+					alt="cover_3" />
+				<p
+					class="w-fit h-fit text-black text-7xl absolute top-[30%] inset-x-0 m-auto">
+					You lost the match
+				</p>
+				<!-- Try again button -->
+				<button
+					class="xl:w-40 xl:h-18 lg:w-36 lg:h-14 md:w-28 md:h-10 bg-rose-600 p-6 rounded-full shadow-xl absolute top-20 inset-0 m-auto flex flex-row justify-center items-center cursor-pointer hover:bg-rose-400 group transition-all animate-bounce"
+					type="button">
+					<span
+						class="text-center text-white group-hover:text-black xl:text-[16px] lg:text-sm md:text-[11px] font-bold"
+						>Try Again</span
+					>
+				</button>
+			</div>
+		</div>
+		<!-- JavaScript file -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>
