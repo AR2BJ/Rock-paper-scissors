@@ -1,0 +1,19 @@
+{
+	"name": "rock_paper_scissors",
+	"version": "1.0.0",
+	"main": "tailwind.config.js",
+	"scripts": {
+		"tailwind": "npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"live-server": "^1.2.2",
+		"sweetalert2": "^11.10.8"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.4.3"
+	}
+}
