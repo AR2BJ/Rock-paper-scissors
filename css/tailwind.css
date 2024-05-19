@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "komikax";
+	src: url("../font/eot/komikax.eot");
+	src: local("Barlow"),
+		url("../font/eot/komikax.eot?#iefix") format("embedded-opentype"),
+		url("../font/woff2/komikax.woff2") format("woff2"),
+		url("../font/woff/komikax.woff") format("woff"),
+		url("../font/ttf/komikax.ttf") format("truetype");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+	font-family: komikax;
+}
+
+div.wrapper > div.contents > p.title > span {
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.412);
+}
+div.wrapper > div.content_1 > p {
+	transition-duration: 700ms;
+	transition-delay: 100ms;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
